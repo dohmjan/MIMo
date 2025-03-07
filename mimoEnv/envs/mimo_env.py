@@ -597,7 +597,7 @@ class MIMoEnv(MujocoEnv, utils.EzPickle):
             info["achieved_goal"] = copy.deepcopy(achieved_goal)
             info["desired_goal"] = copy.deepcopy(self.goal)
 
-        terminated, truncated = self._is_done(achieved_goal, self.goal, info)
+        terminated, truncated = False, False
         reward = self.compute_reward(achieved_goal, self.goal, info)
         return obs, reward, terminated, truncated, info
 
