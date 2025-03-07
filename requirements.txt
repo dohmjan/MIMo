@@ -1,4 +1,4 @@
-numpy
+numpy<2.0.0
 matplotlib
 imageio
 scipy
@@ -7,7 +7,6 @@ cachetools
 CacheToolsUtils
 networkx
 rtree
-mujoco==2.3.7
-gymnasium==0.28.1
-stable-baselines3>=2.0.0
+mujoco<3.0.0
+gymnasium==0.29.1
 opencv-python
