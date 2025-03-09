@@ -313,7 +313,7 @@ def lock_joint(mujoco_model, joint_name, joint_angle=None):
     constraint_id = mujoco_model.equality(joint_name).id
     if joint_angle is not None:
         set_joint_locking_angle(mujoco_model, joint_name, joint_angle, constraint_id=constraint_id)
-    mujoco_model.eq_active[constraint_id] = True
+    mujoco_model.eq_active0[constraint_id] = True
 
 
 def unlock_joint(mujoco_model, joint_name):
@@ -326,7 +326,7 @@ def unlock_joint(mujoco_model, joint_name):
         joint_name (str): The name of the joint.
     """
     constraint_id = mujoco_model.equality(joint_name).id
-    mujoco_model.eq_active[constraint_id] = False
+    mujoco_model.eq_active0[constraint_id] = False
 
 
 # ======================== Mujoco frame utils =====================================
